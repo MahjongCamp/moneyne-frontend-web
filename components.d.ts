@@ -7,14 +7,31 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Content: typeof import('./src/layout/Content/index.vue')['default']
+    Default: typeof import('./src/layout/default/index.vue')['default']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
     ElBreadcrumbItem: typeof import('element-plus/es')['ElBreadcrumbItem']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCol: typeof import('element-plus/es')['ElCol']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
+    ElRow: typeof import('element-plus/es')['ElRow']
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IFlatColorIconsAndroidOs: typeof import('~icons/flat-color-icons/android-os')['default']
+    Layout: typeof import('./src/layout/index.vue')['default']
+    Logo: typeof import('./src/layout/Sidebar/components/Logo/index.vue')['default']
+    Menu: typeof import('./src/layout/Sidebar/components/Menu/index.vue')['default']
+    Navbar: typeof import('./src/layout/Navbar/index.vue')['default']
+    Page: typeof import('./src/layout/page/index.vue')['default']
+    PageTitle: typeof import('./src/layout/Navbar/components/PageTitle/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sidebar: typeof import('./src/layout/Sidebar/index.vue')['default']
+    UserAvatar: typeof import('./src/layout/Navbar/components/UserAvatar/index.vue')['default']
   }
 }

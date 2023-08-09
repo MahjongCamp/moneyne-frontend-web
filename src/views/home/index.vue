@@ -4,15 +4,7 @@ const counter = useCounterStore()
 </script>
 
 <template>
-  <div>
-    hello
-    <span>vue3</span>
-  </div>
-  <div>count now is {{ counter.count }}</div>
-  <el-button type="primary" class="my-[8px]" @click="counter.reset()">
-    reset
-  </el-button>
-  <input type="text" placeholder="请输入" />
+  <Navbar />
 </template>
 
 <style lang="scss" scoped>
