@@ -16,7 +16,7 @@ declare module 'vue' {
     ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     Layout: typeof import('./src/layout/index.vue')['default']
-    Logo: typeof import('./src/layout/Sidebar/components/Logo/index.vue')['default']
+    Logo: typeof import('./src/components/Logo/index.vue')['default']
     Menu: typeof import('./src/layout/Sidebar/components/Menu/index.vue')['default']
     Navbar: typeof import('./src/layout/Navbar/index.vue')['default']
     PageTitle: typeof import('./src/layout/Navbar/components/PageTitle/index.vue')['default']
