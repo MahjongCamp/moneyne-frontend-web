@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Chart: typeof import('./src/components/chart/index.vue')['default']
     Content: typeof import('./src/layout/Content/index.vue')['default']
     Default: typeof import('./src/layout/default/index.vue')['default']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
