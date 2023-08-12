@@ -46,7 +46,7 @@ export default defineConfig({
     }),
     Components({
       dts: true, // enabled by default if `typescript` is installed
-      dirs: ['src/components', 'src/layout'],
+      dirs: ['src/components', 'src/layout', 'src/views'],
       resolvers: [
         IconsResolver(),
         ElementPlusResolver(),

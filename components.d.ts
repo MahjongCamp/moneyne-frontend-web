@@ -7,15 +7,21 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Analysis: typeof import('./src/views/analysis/index.vue')['default']
     Chart: typeof import('./src/components/chart/index.vue')['default']
     Content: typeof import('./src/layout/Content/index.vue')['default']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
+    ElForm: typeof import('element-plus/es')['ElForm']
+    ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElInput: typeof import('element-plus/es')['ElInput']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     Layout: typeof import('./src/layout/index.vue')['default']
+    Login: typeof import('./src/views/login/index.vue')['default']
+    LoginForm: typeof import('./src/views/login/components/LoginForm/index.vue')['default']
     Logo: typeof import('./src/components/Logo/index.vue')['default']
     Menu: typeof import('./src/layout/Sidebar/components/Menu/index.vue')['default']
     Navbar: typeof import('./src/layout/Navbar/index.vue')['default']

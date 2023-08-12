@@ -2,13 +2,13 @@
   <div class="flex h-screen">
     <div class="flex-1">
       <Logo class="w-[298px]" />
-      <div>
+      <div class="text-left w-[450px]">
         <div class="text-4xl font-bold">Login your account</div>
         <div>
           New to MoneyNe?
           <RouterLink to="/sign">Create an account</RouterLink>
         </div>
-        <LoginForm :form="form" />
+        <LoginForm />
       </div>
     </div>
     <div class="w-[43%] p-8 flex items-center justify-center h-full">
@@ -21,11 +21,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-const form = {
-  email: '',
-  password: ''
-}
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>
