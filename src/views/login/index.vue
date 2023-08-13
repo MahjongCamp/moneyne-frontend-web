@@ -1,10 +1,12 @@
 <template>
   <div class="flex h-screen">
-    <div class="flex-1">
+    <div class="flex-1 flex flex-col">
       <Logo class="w-[298px]" />
-      <div class="text-left w-[450px]">
-        <div class="text-4xl font-bold">Login your account</div>
-        <div>
+      <div
+        class="flex-1 flex flex-col justify-center text-left w-[500px] mx-auto"
+      >
+        <div class="text-5xl font-bold leading-loose">Login your account</div>
+        <div class="text-xl mb-8">
           New to MoneyNe?
           <RouterLink to="/sign">Create an account</RouterLink>
         </div>
