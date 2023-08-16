@@ -28,6 +28,8 @@ declare module 'vue' {
     Menu: typeof import('./src/layout/Sidebar/components/Menu/index.vue')['default']
     Navbar: typeof import('./src/layout/Navbar/index.vue')['default']
     PageTitle: typeof import('./src/layout/Navbar/components/PageTitle/index.vue')['default']
+    Register: typeof import('./src/views/register/index.vue')['default']
+    RegisterForm: typeof import('./src/views/register/components/RegisterForm/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./src/layout/Sidebar/index.vue')['default']

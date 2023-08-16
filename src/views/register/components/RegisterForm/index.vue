@@ -2,7 +2,7 @@
   <div>
     <el-form
       ref="form"
-      :model="loginFrom"
+      :model="registerFrom"
       :rules="rules"
       label-width="80px"
       label-position="top"
@@ -11,26 +11,39 @@
     >
       <el-form-item label="Email">
         <el-input
-          v-model="loginFrom.email"
+          v-model="registerFrom.email"
           placeholder="Enter your email"
           class="!text-[16px]"
         ></el-input>
       </el-form-item>
       <el-form-item label="Password">
         <el-input
-          v-model="loginFrom.password"
+          v-model="registerFrom.password"
           type="password"
           show-password
           class="!text-[16px]"
           placeholder="Enter your password"
         ></el-input>
       </el-form-item>
-      <div class="flex justify-between">
-        <el-checkbox
-          v-model="isRemember"
-          label=" Remember for 30 days"
-          size="large"
-        />
+      <el-form-item label="Confirm Password">
+        <el-input
+          v-model="registerFrom.cPassword"
+          type="password"
+          show-password
+          class="!text-[16px]"
+          placeholder="Confirm your password"
+        ></el-input>
+      </el-form-item>
+      <el-form-item label="Verify Code">
+        <el-input
+          v-model="registerFrom.password"
+          type="password"
+          show-password
+          class="!text-[16px]"
+          placeholder="Enter Verify Code"
+        ></el-input>
+      </el-form-item>
+      <div class="flex justify-end mb-4">
         <router-link to="/">Forgot Password</router-link>
       </div>
     </el-form>
@@ -38,28 +51,30 @@
       type="primary"
       size="default"
       class="w-full !h-[54px]"
-      @click="login"
+      @click="isSendEmail ? login() : sendEmail()"
     >
-      Sign in
+      {{ isSendEmail ? 'Sign in' : 'Send verify code' }}
     </el-button>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { FormRules } from 'element-plus'
-interface LoginForm {
+interface Register {
   email: string
   password: string
+  cPassword: string
+  verifyCode: string
 }
 
-const loginFrom = reactive<LoginForm>({
+const registerFrom = reactive<Register>({
   email: '',
-  password: ''
+  password: '',
+  cPassword: '',
+  verifyCode: ''
 })
 
-let isRemember = ref<boolean>(false)
-
-const rules = reactive<FormRules<LoginForm>>({
+const rules = reactive<FormRules<Register>>({
   email: [
     { required: true, message: 'Please input your email', trigger: 'blur' }
   ],
@@ -68,6 +83,9 @@ const rules = reactive<FormRules<LoginForm>>({
   ]
 })
 
+const isSendEmail = ref<boolean>(false)
+
+const sendEmail = () => {}
 const login = () => {}
 </script>
 

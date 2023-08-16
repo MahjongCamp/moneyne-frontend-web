@@ -5,12 +5,14 @@
       <div
         class="flex-1 flex flex-col justify-center text-left w-[560px] mx-auto"
       >
-        <div class="text-5xl font-bold leading-loose">Login your account</div>
-        <div class="text-xl mb-8">
-          New to MoneyNe?
-          <RouterLink to="/register">Create an account</RouterLink>
+        <div class="text-5xl font-bold leading-loose">
+          Register your account
         </div>
-        <LoginForm />
+        <div class="text-xl mb-8">
+          Already have an account?
+          <RouterLink to="/login">Go to login</RouterLink>
+        </div>
+        <RegisterForm />
       </div>
     </div>
     <div class="w-[43%] p-8 flex items-center justify-center h-full">
